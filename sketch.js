@@ -20,19 +20,24 @@ function draw(){
     //draw an image from the array of images
     image(imgs[imageCounter % imgs.length], 0, 0, 1024, 1024);
     imageCounter++
-    // direction = nextDirection(imageCounter, currentDirection, 0, imgs.length - 1)
-    // console.log(direction)
-    // imageCounter+= direction;
     console.log(imageCounter)
 }
 
-// // Returns the next direction to take depending on whether we've hit our upper or lower bounds
-// const nextDirection = (count, direction, lo, hi) => {
-//     if(direction > 0 &&  count >= hi){
-//         return direction *= -1
-//     } else if(direction < 0 && count === lo){
-//         return direction *= -1
-//     } else {
-//         return direction
-//     }
-// }
+const JohnnyAppleseed = {
+    greeting: "Hi! My name is Johnny Appleseed.",
+    occupation: 'apple tree planting',
+    location: Pennsylania,
+    direction: 'South',
+    waterSoil: () => {
+        location.soil == "fertile";
+    },
+    plantSeed: (seed) => {
+        if (location.soil == "fertile") {
+            location.soil == "occupied";
+        } else if (location.soil == "dry") {
+            waterSoil();
+        }
+    },
+    goal: "I want to plant apple trees on all the open land!",
+    goal_achieved: False 
+}
